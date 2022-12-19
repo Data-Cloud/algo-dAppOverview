@@ -30,7 +30,7 @@ def first_transaction_example(my_mnemonic, my_address):
     params.flat_fee = constants.MIN_TXN_FEE 
     params.fee = 1000
     receiver = "NCTZRY6BY5FBH4BXMGIHWD64GFTOOJKQVY3JL6FFDCQLALHU64HUS6A2RM"
-    amount = 100000
+    amount = 10000
     note = "Hello World".encode()
 
     unsigned_txn = transaction.PaymentTxn(my_address, params, receiver, amount, None, note)
@@ -63,9 +63,9 @@ def first_transaction_example(my_mnemonic, my_address):
     account_info = algod_client.account_info(my_address)
     print("Final Account balance: {} microAlgos".format(account_info.get('amount')) + "\n")
 
-private_key = "t/j/JtH/ZF3FWOQKHJznBKJkm6BlA2NLAPpFvklVc3Vop5jjwcdKE/A3YZB7D9wxZuclUK42lfilGKCwLPT3Dw=="
-my_mnemonic = "black zoo nature wonder size firm shiver tone life idea inherit cake sing chat code address hockey abuse wonder tone nature stem process about cannon"
-my_address = "NCTZRY6BY5FBH4BXMGIHWD64GFTOOJKQVY3JL6FFDCQLALHU64HUS6A2RM"
+private_key = ""
+my_mnemonic = ""
+my_address = ""
 first_transaction_example(my_mnemonic, my_address)
 
 # https://bank.testnet.algorand.network/
